@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const fileUpload = require('./lib/index');
 
-
+var appRouter = require('./routes/app');
+var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
