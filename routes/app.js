@@ -38,13 +38,7 @@ router.post('/contactus', async function (req, res) {
         data: data
     })
 });
-router.post('/get_user_info', async function (req, res) {
-    var data = await model.get_user_info(req.body)
-    return res.json({
-        code: 20000,
-        data: data
-    })
-});
+
 
 router.post('/update_profile', async function (req, res) {
     var data = await model.update_profile(req.body)
