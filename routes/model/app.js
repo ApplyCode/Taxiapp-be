@@ -1,4 +1,5 @@
-
+var db = require('../../utils/database');
+var md5 = require('md5');
 var utils = require('../../utils/index');
 var config = require('../../src/config');
 const nodemailer = require('nodemailer');
