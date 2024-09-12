@@ -1,7 +1,6 @@
 var mysql = require('mysql');
 var config = require('./../src/config');
 
-//database handle
 var con;
 
 function handleDisconnect() {
