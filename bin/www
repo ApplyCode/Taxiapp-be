@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
 var admin = require('../admin');
 var debug = require('debug')('backend:server');
 var http = require('http');
