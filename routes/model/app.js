@@ -5,7 +5,11 @@ var config = require('../../src/config');
 const nodemailer = require('nodemailer');
 let transport = nodemailer.createTransport(config.smtp);
 var moment = require("moment")
-
+const OneSignal = require('onesignal-node');    
+const { param } = require('../app');
+const { EmptyResultError } = require('sequelize');
+const client = new OneSignal.Client('c167fc9d-d6ff-41e0-bd84-05a10c074219', 'ZjkxN2MyYmMtOGVkZi00YTRlLWI0ZmEtY2Y0OWNlZmYzZTI2');
+const fs = require('fs');
 
 var client_signup = async function (params) {
     let car_picture = params['faceImg'] ? Date.now()+'_face.jpg' : null
