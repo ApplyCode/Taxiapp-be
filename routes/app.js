@@ -13,7 +13,7 @@ const Storage = multer.diskStorage({
       callback(null, `${Date.now()}_${file.originalname}`)
     },
   })
-const upload = multer({ dest: '/' })
+
 
 router.post('/client_signup', async function (req, res) {
     var data = await model.client_signup(req.body)
