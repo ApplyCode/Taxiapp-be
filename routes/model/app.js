@@ -19,7 +19,10 @@ var client_signup = async function (params) {
         await fs.writeFile('./public/uploads/'+car_picture, params['faceImg'], 'base64', (err) => {
             if (err) console.log(err)
         })
-
+    if(params['frontImg'])
+        await fs.writeFile('./public/uploads/'+license_front, params['frontImg'], 'base64', (err) => {
+            if (err) console.log(err)
+        })
     if(params['backImg'])
         await fs.writeFile('./public/uploads/'+license_back, params['backImg'], 'base64', (err) => {
             if (err) console.log(err)
