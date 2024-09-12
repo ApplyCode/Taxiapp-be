@@ -35,6 +35,22 @@ var client_signup = async function (params) {
         insert_fields[i] = '`' + insert_fields[i] + '`'
     }
     
+    var insert_vals = [
+        "'" + params['user'] + "'",
+        "'" + params['password'] + "'",
+        "'" + params['email'] + "'",
+        "'" + params['phone'] + "'",
+        "'" + params['country'] + "'",
+        "'" + params['type'] + "'",
+        "'" + params['phone_code'] + "'",
+        "'" + params['kind'] + "'",
+        "'" + params['car_color'] + "'",
+        "'" + params['plate_no'] + "'",
+        "'0'",
+        "'" + car_picture + "'",
+        "'" + license_front + "'",
+        "'" + license_back + "'"
+    ]
 
     return db.list("SELECT * FROM tb_user where email = '"+params['email']+"' or user = '"+params['user']+"'").then((r) => {
         
