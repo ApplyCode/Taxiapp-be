@@ -225,12 +225,6 @@ router.post('/setOnOff', async function (req, res) {
     })
 });
 
-router.post('/forgot', async function (req, res) {
-    var data = await model.forgot(req.body)
-    return res.json({
-        code: 20000,
-        data: data
-    })
-});
+
 
 module.exports = router;
