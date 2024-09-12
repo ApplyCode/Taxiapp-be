@@ -29,9 +29,11 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use('/app', appRouter);
 
-
-
+app.use(function (req, res, next) {
+  next(createError(404));
+});
 
 app.use(function (err, req, res, next) {
   res.locals.message = err.message;
