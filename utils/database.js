@@ -28,7 +28,7 @@ var itemClause = function (key, val, opt = '') {
     if (typeof (val) == 'string') {
         return key + " " + (opt === '' ? "=" : opt) + " " + "'" + val + "'"
     }
-    return key + " " + (opt === '' ? "=" : opt) + " " + val
+
 }
 var lineClause = function (items, delimiter) {
     var ret = ''
