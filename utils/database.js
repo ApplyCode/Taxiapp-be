@@ -6,7 +6,10 @@ var con;
 function handleDisconnect() {
     con = mysql.createConnection(config.mysql);
     con.connect(function (err) {
-
+        if (err) {
+            console.log('error when connecting to db:', err);
+            setTimeout(handleDisconnect, 2000);
+        }
     });
     con.on('error', function (err) {
         console.log('db error', err);
