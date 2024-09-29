@@ -1,4 +1,7 @@
+var mysql = require('mysql');
+var config = require('./../src/config');
 
+var con;
 
 function handleDisconnect() {
     con = mysql.createConnection(config.mysql);
